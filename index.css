@@ -1,0 +1,167 @@
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Grid CSS */
+
+#heroGrid {
+  margin: 0px 5%;
+  min-height: 50px;
+  height: 40vh;
+  grid-template-areas:
+  "myWork";
+}
+
+#headline {
+  background-color: rgba(255,255,255,0.8);
+  border-bottom: 5px solid #f07167;
+  position: absolute;
+  right: center;
+  top: 175px;
+  padding: 25px;
+  max-width: 600px;
+  z-index: 100;
+}
+
+.heroGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+/* Category Grid CSS */
+
+.subHeading {
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 300px;
+  margin: 50px auto;
+}
+
+#myWork {
+  font-size: 42px;
+}
+
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.heading {
+  background-color: #f07167;
+  padding: 20px;
+  padding-bottom: 25px;
+  height: 20px;
+  color: white;
+  font-size: 18px; 
+  font-family: Outfit;
+  border-bottom: 5px solid #F07197;
+  background-repeat: no-repeat;
+}
+
+
+/* Navigation CSS */
+
+#navBar {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 5%;
+}
+#navBar h1 {
+  width: 25%;
+  font-weight: 500;
+}
+#navigation {
+  display: flex;
+  width: 50%;
+  align-items: right;
+  justify-content: spaced-evenly;
+}
+#navigation p {
+  cursor: pointer;
+  text-decoration: none;
+}
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+}
+.icons img {
+  margin: 15px;
+  cursor: pointer;
+}
+.highlight {
+  color: #F2cc8f;
+  font-weight: 700;
+}
+
+/* Typography CSS */
+
+h2 {
+  font-family: Outfit;
+  font-size: 60px;
+  margin: 0px 0px;
+  color: #FF6200;
+}
+
+h3 {
+  font-size: 32px;
+  font-family: Outfit;
+  font-weight: 300;
+  margin: 0px 0px;
+}
+
+h4 {
+  color: white;
+  font-family: Outfit;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+
+#headline p {
+  max-width: 350px;
+  font-size: 20px;
+  font-family: Outfit;
+  font-weight: 300;
+  margin: 0px 0px;
+  color: #3d405b;
+}
+
+@media only screen and (max-width: 1000px) {
+  #navigation {
+    display: none;
+  }
+  .icons {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #headline {
+    position: static;
+    margin: 20px;
+    background-repeat: no-repeat;
+  }
+  
+  #categoryGrid {
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hmongPic"
+      "hmongProj"
+      "bnePic"
+      "bneProj"
+      "derbyPic"
+      "derbyProj"
+    ;
+  }
+}
